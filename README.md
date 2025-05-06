@@ -8,8 +8,6 @@
 | *Mata Kuliah*    |     Pemograman Web 2  |
 | *Dosen Pengampu* | Agung Nugroho, S.Kom., M.Kom.|
 
-![voting](https://github.com/user-attachments/assets/35f121d5-069d-447d-82b9-5327060dc115)
-
 # Pendahuluam
 Di era transformasi digital saat ini, kebutuhan akan aplikasi yang mampu bekerja secara real-time semakin tinggi. Mulai dari layanan chat, notifikasi instan, hingga sistem voting online, semuanya mengandalkan teknologi yang mampu mengirim dan menerima data tanpa jeda waktu yang terasa. Salah satu teknologi yang dirancang khusus untuk kebutuhan ini adalah WebSocket.
 
