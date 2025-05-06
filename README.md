@@ -8,6 +8,7 @@
 | *Mata Kuliah*    |     Pemograman Web 2  |
 | *Dosen Pengampu* | Agung Nugroho, S.Kom., M.Kom.|
 
+![voting](https://github.com/user-attachments/assets/35f121d5-069d-447d-82b9-5327060dc115)
 
 # Pendahuluam
 Di era transformasi digital saat ini, kebutuhan akan aplikasi yang mampu bekerja secara real-time semakin tinggi. Mulai dari layanan chat, notifikasi instan, hingga sistem voting online, semuanya mengandalkan teknologi yang mampu mengirim dan menerima data tanpa jeda waktu yang terasa. Salah satu teknologi yang dirancang khusus untuk kebutuhan ini adalah WebSocket.
@@ -94,5 +95,28 @@ server.listen(8080, () => {
 });
 ```
 
+## Penjelasan Kode Client:
 
+- Chart.js di-load langsung dari CDN di baris <script src=”https://cdn.jsdelivr.net/npm/chart.js"></script>.
+- Script voting dan update grafik ditulis langsung di dalam <script> di file ini, sehingga praktis untuk eksperimen lokal.
+- Fungsi vote(pilihan) akan mengirimkan pesan ke server setiap kali tombol diklik.
+- Setiap kali server mengirim data terbaru, grafik akan langsung ter-update otomatis secara real-time.
+
+# Hasil Eksperimen
+
+![ss](https://github.com/user-attachments/assets/998eb8d4-171c-4463-8e7f-2099b20d6952)
+
+# Setelah aplikasi dijalankan:
+
+- Ketika seorang pengguna melakukan vote (contoh: klik “Vote A”), maka seluruh klien lain yang membuka aplikasi akan langsung melihat update jumlah vote tanpa perlu menekan refresh.
+- Grafik yang menggunakan Chart.js akan langsung bergerak naik mengikuti jumlah vote terbaru.
+- Proses ini berlangsung real-time berkat koneksi WebSocket yang selalu aktif antara server dan semua klien.
+
+# Analisis
+
+## Implementasi ini membuktikan bahwa :
+
+- WebSocket sangat efektif untuk aplikasi real-time seperti live voting.
+- Dengan menanamkan Chart.js dan script voting langsung di file client.html, kita dapat membuat aplikasi yang sederhana namun tetap powerful untuk skenario real-time.
+- Pendekatan ini cocok untuk eksperimen, presentasi, atau polling sederhana pada acara seperti seminar, webinar, atau kelas daring.
 
